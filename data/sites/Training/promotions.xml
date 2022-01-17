@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<promotions xmlns="http://www.demandware.com/xml/impex/promotion/2008-01-31">
+    <campaign campaign-id="Training-Campign-January/22">
+        <enabled-flag>true</enabled-flag>
+        <campaign-scope>
+            <applicable-online/>
+        </campaign-scope>
+        <coupons>
+            <coupon coupon-id="10off"/>
+        </coupons>
+    </campaign>
+
+    <promotion promotion-id="10%offordersover100">
+        <enabled-flag>true</enabled-flag>
+        <archived-flag>false</archived-flag>
+        <searchable-flag>false</searchable-flag>
+        <refinable-flag>false</refinable-flag>
+        <prevent-requalifying-flag>false</prevent-requalifying-flag>
+        <prorate-across-eligible-items-flag>false</prorate-across-eligible-items-flag>
+        <exclusivity>no</exclusivity>
+        <name xml:lang="x-default">10% Off Orders Over 100</name>
+        <callout-msg xml:lang="x-default">10% Off Orders Over 100</callout-msg>
+        <details xml:lang="x-default">10% Off Orders Over 100</details>
+        <product-promotion-rule>
+            <qualifying-products>
+                <included-products>
+                    <condition-group>
+                        <category-condition catalog-id="storefront-catalog-training" operator="is equal">
+                            <category-id>Education</category-id>
+                        </category-condition>
+                    </condition-group>
+                </included-products>
+            </qualifying-products>
+            <discounts condition-type="product-amount">
+                <discount>
+                    <threshold>100.0</threshold>
+                    <percentage>10.0</percentage>
+                </discount>
+            </discounts>
+        </product-promotion-rule>
+    </promotion>
+
+    <promotion promotion-id="100%offshippingforbooks100ormore">
+        <enabled-flag>true</enabled-flag>
+        <archived-flag>false</archived-flag>
+        <searchable-flag>false</searchable-flag>
+        <refinable-flag>false</refinable-flag>
+        <prevent-requalifying-flag>false</prevent-requalifying-flag>
+        <prorate-across-eligible-items-flag>false</prorate-across-eligible-items-flag>
+        <exclusivity>no</exclusivity>
+        <name xml:lang="x-default">100% Off Shipping For Books 100 Or More</name>
+        <callout-msg xml:lang="x-default">100% Off Shipping For Books 100 Or More</callout-msg>
+        <details xml:lang="x-default">100% Off Shipping For Books 100 Or More</details>
+        <shipping-promotion-rule>
+            <qualifying-products>
+                <included-products>
+                    <condition-group>
+                        <category-condition catalog-id="storefront-catalog-training" operator="is equal">
+                            <category-id>Books</category-id>
+                        </category-condition>
+                    </condition-group>
+                </included-products>
+            </qualifying-products>
+            <shipping-methods/>
+            <discounts condition-type="shipment-total">
+                <discount>
+                    <threshold>100.0</threshold>
+                    <percentage>100.0</percentage>
+                </discount>
+            </discounts>
+        </shipping-promotion-rule>
+    </promotion>
+
+    <promotion promotion-id="10offorder">
+        <enabled-flag>true</enabled-flag>
+        <archived-flag>false</archived-flag>
+        <searchable-flag>false</searchable-flag>
+        <refinable-flag>false</refinable-flag>
+        <prevent-requalifying-flag>false</prevent-requalifying-flag>
+        <prorate-across-eligible-items-flag>false</prorate-across-eligible-items-flag>
+        <exclusivity>no</exclusivity>
+        <name xml:lang="x-default">10 Off Order</name>
+        <callout-msg xml:lang="x-default">10 Off Order</callout-msg>
+        <details xml:lang="x-default">10 Off Order</details>
+        <product-promotion-rule>
+            <discounted-products>
+                <included-products>
+                    <condition-group>
+                        <category-condition catalog-id="storefront-catalog-training" operator="is equal">
+                            <category-id>Education</category-id>
+                        </category-condition>
+                    </condition-group>
+                </included-products>
+            </discounted-products>
+            <simple-discount>
+                <amount>10.0</amount>
+            </simple-discount>
+            <max-applications>1</max-applications>
+        </product-promotion-rule>
+    </promotion>
+
+    <promotion promotion-id="buy2ormoreandget20%off">
+        <enabled-flag>true</enabled-flag>
+        <archived-flag>false</archived-flag>
+        <searchable-flag>false</searchable-flag>
+        <refinable-flag>false</refinable-flag>
+        <prevent-requalifying-flag>false</prevent-requalifying-flag>
+        <prorate-across-eligible-items-flag>false</prorate-across-eligible-items-flag>
+        <exclusivity>no</exclusivity>
+        <name xml:lang="x-default">Buy 2 or more and get 20% off</name>
+        <callout-msg xml:lang="x-default">Buy 2 or more and get 20% off</callout-msg>
+        <details xml:lang="x-default">Buy 2 or more and get 20% off</details>
+        <order-promotion-rule>
+            <qualifying-products>
+                <included-products>
+                    <condition-group>
+                        <category-condition catalog-id="storefront-catalog-training" operator="is equal">
+                            <category-id>Courses</category-id>
+                        </category-condition>
+                    </condition-group>
+                </included-products>
+            </qualifying-products>
+            <excluded-products>
+                <included-products>
+                    <condition-group>
+                        <category-condition catalog-id="storefront-catalog-training" operator="is equal">
+                            <category-id>Courses</category-id>
+                        </category-condition>
+                    </condition-group>
+                </included-products>
+            </excluded-products>
+            <discount-only-qualifying-products>true</discount-only-qualifying-products>
+            <discounts condition-type="order-total">
+                <discount>
+                    <threshold>2.0</threshold>
+                    <percentage>20.0</percentage>
+                </discount>
+            </discounts>
+            <exclude-discounted-products>false</exclude-discounted-products>
+        </order-promotion-rule>
+    </promotion>
+
+    <promotion-campaign-assignment promotion-id="10%offordersover100" campaign-id="Training-Campign-January/22">
+        <qualifiers match-mode="any">
+            <customer-groups/>
+            <source-codes/>
+        </qualifiers>
+    </promotion-campaign-assignment>
+
+    <promotion-campaign-assignment promotion-id="100%offshippingforbooks100ormore" campaign-id="Training-Campign-January/22">
+        <qualifiers match-mode="any">
+            <customer-groups/>
+            <source-codes/>
+        </qualifiers>
+    </promotion-campaign-assignment>
+
+    <promotion-campaign-assignment promotion-id="10offorder" campaign-id="Training-Campign-January/22">
+        <qualifiers match-mode="any">
+            <customer-groups/>
+            <source-codes/>
+            <coupons/>
+        </qualifiers>
+    </promotion-campaign-assignment>
+
+    <promotion-campaign-assignment promotion-id="buy2ormoreandget20%off" campaign-id="Training-Campign-January/22">
+        <qualifiers match-mode="any">
+            <customer-groups/>
+            <source-codes/>
+        </qualifiers>
+    </promotion-campaign-assignment>
+
+</promotions>
