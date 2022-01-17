@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="footer-column-m" context="global" configuration-id="training-content-config-1" assigned-to-site="true">
+        <description>Text displaying if logged</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;html&gt;
+	&lt;body&gt;
+		&lt;p&gt;&lt;b&gt;You are logged in :)&lt;/b&gt;
+		&lt;/p&gt;
+	&lt;/body&gt;
+
+&lt;/html&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="footer-column-m" context="global" configuration-id="training-content-config-2" assigned-to-site="true">
+        <description>Text displaying if not logged</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;html&gt;
+	&lt;body&gt;
+		&lt;p&gt;&lt;b&gt;You are not logged in :(&lt;/b&gt;
+		&lt;/p&gt;
+	&lt;/body&gt;
+
+&lt;/html&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+</slot-configurations>
