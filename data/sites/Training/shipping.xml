@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shipping xmlns="http://www.demandware.com/xml/impex/shipping/2007-03-31">
-    <shipping-method method-id="free-shipping" default="true">
+    <shipping-method method-id="default-shipping" default="true">
+        <display-name xml:lang="x-default">Default shipping</display-name>
+        <description xml:lang="x-default">Default shipping</description>
+        <online-flag>true</online-flag>
+        <price-table>
+            <amount order-value="0.0">5.0</amount>
+        </price-table>
+        <custom-attributes>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+    <shipping-method method-id="free-shipping" default="false">
         <display-name xml:lang="x-default">Free Shipping</display-name>
         <description xml:lang="x-default">Free Shipping</description>
         <online-flag>true</online-flag>
         <price-table>
-            <amount order-value="0.0">0.0</amount>
+            <amount order-value="0">0.0</amount>
         </price-table>
         <custom-attributes>
             <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
