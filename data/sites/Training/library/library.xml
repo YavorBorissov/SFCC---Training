@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31">
+    <folder folder-id="root">
+        <online-flag>true</online-flag>
+        <page-attributes/>
+    </folder>
+
+    <content content-id="content-asset-description-training">
+        <display-name xml:lang="x-default">Description</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div&gt;&#13;
+&lt;h2&gt;Our mission&lt;/h2&gt;&#13;
+	&lt;p&gt;Education is one of the areas our society struggles the most. In this fast paced world we often forget to constantly improve our knowledge and skills which we have to do in order to be competent enough. Therefore we carefully picked out the best courses and books from the internet in order for our customers to develop the skills they need in today's world.&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+
+</library>
