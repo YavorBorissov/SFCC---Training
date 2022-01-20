@@ -1,0 +1,11 @@
+.DS_Store
+.tern-project
+/.vscode/
+/.sonarlint/
+/**/dw*.json
+*.zip
+/resources/*.csv
+.cache/
+/node_modules/
+/dw-cli.json
+dw.json
