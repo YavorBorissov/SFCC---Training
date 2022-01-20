@@ -30,10 +30,7 @@
         <step-quantity>1</step-quantity>
         <display-name xml:lang="x-default">The Total Money Makeover by Dave Ramsey</display-name>
         <short-description xml:lang="x-default">The Total Money Makeover: A Proven Plan for Financial Fitness is a personal finance book written by Dave Ramsey that was first published in 2003. An updated edition was published in 2007 and 2013. It teaches an effective way of getting out of debt, staying out of debt, and corrects myths about money.</short-description>
-        <store-force-price-flag>false</store-force-price-flag>
-        <store-non-inventory-flag>false</store-non-inventory-flag>
-        <store-non-revenue-flag>false</store-non-revenue-flag>
-        <store-non-discountable-flag>false</store-non-discountable-flag>
+        
         <online-flag>true</online-flag>
         <available-flag>true</available-flag>
         <searchable-flag>true</searchable-flag>
@@ -71,10 +68,7 @@
         <step-quantity>1</step-quantity>
         <display-name xml:lang="x-default">The Complete JavaScript Course 2022: From Zero to Expert!</display-name>
         <short-description xml:lang="x-default">The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!</short-description>
-        <store-force-price-flag>false</store-force-price-flag>
-        <store-non-inventory-flag>false</store-non-inventory-flag>
-        <store-non-revenue-flag>false</store-non-revenue-flag>
-        <store-non-discountable-flag>false</store-non-discountable-flag>
+        
         <online-flag>true</online-flag>
         <online-flag site-id="Training">true</online-flag>
         <available-flag>true</available-flag>
@@ -115,10 +109,6 @@
         <step-quantity>1</step-quantity>
         <display-name xml:lang="x-default">React - The Complete Guide (incl Hooks, React Router, Redux)</display-name>
         <short-description xml:lang="x-default">Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Routing, Animations, Next.js and way more!</short-description>
-        <store-force-price-flag>false</store-force-price-flag>
-        <store-non-inventory-flag>false</store-non-inventory-flag>
-        <store-non-revenue-flag>false</store-non-revenue-flag>
-        <store-non-discountable-flag>false</store-non-discountable-flag>
         <online-flag>true</online-flag>
         <online-flag site-id="Training">true</online-flag>
         <available-flag>true</available-flag>
