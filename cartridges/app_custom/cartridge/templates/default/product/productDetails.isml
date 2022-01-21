@@ -45,7 +45,7 @@
                             <h1 class="product-name hidden-sm-down">${product.productName}</h1>
                         </div>
                     </div>
-
+<isprint value="${product.promoMessage}">
 
                     <div class="row">
                         <div class="col">
