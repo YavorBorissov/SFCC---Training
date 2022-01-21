@@ -45,10 +45,6 @@
                             <h1 class="product-name hidden-sm-down">${product.productName}</h1>
                         </div>
                     </div>
-                    <iscomment> <isset name="isPromo" value="${product.raw.custom.promoMessage === "PROMOTION"}" scope="page"/>
-                    <isif condition="${isPromo}">
-                    show only for promo
-                    </isif> </iscomment>
 <isprint value="${product.promoMessage}">
 
                     <div class="row">
