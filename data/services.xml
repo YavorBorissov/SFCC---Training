@@ -3,7 +3,7 @@
     <service-credential service-credential-id="Joke.Credentials">
         <url>https://icanhazdadjoke.com/</url>
         <user-id/>
-        <password masked="true">********</password>
+        <password/>
     </service-credential>
 
     <service-profile service-profile-id="Joke.Profile">
