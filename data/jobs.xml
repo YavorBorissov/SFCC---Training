@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+   
+    <job job-id="ExportCatalog" priority="0">
+        <description>A job that exports the master catalog once a week.</description>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ExportMaster" type="ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="CatalogID">master-catalog-training</parameter>
+                    <parameter name="ExportCategories">true</parameter>
+                    <parameter name="ExportProducts">true</parameter>
+                    <parameter name="ExportCategoryAssignments">true</parameter>
+                    <parameter name="ExportProductOptions">true</parameter>
+                    <parameter name="ExportRecommendations">true</parameter>
+                    <parameter name="ExportVariationAttributes">true</parameter>
+                    <parameter name="ExportFile">master-export</parameter>
+                    <parameter name="OverwriteExportFile">true</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2022-01-26Z</date-from>
+                    <start-time>04:00:00.000Z</start-time>
+                    <interval>7d</interval>
+                    <day-of-week>
+                        <weekday>Tuesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+</jobs>

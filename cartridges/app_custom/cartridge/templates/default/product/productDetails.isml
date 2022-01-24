@@ -144,6 +144,9 @@
                 <isslot id="product-recommendations-m" description="Recommended products" context="global" context-object="${pdict.product.raw}" />
             </div>
             <iscontentasset aid="content-asset-description-training" />
+
+<isinclude url="${URLUtils.url("Jokes-Show")}">
+
         </div>
 
     </isobject>
