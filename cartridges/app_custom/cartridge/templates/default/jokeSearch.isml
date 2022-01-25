@@ -6,14 +6,11 @@
 </head>
 <body>
     <div class="header">
-        <h1>🤓 Dad jokes matching the term ${pdict.term}:</h1>
+        <h2>🤓 Dad jokes matching the term ${pdict.term}:</h2>
     </div>
-    <hr/>
     <div class="content">
-        <ul>
 	    <isloop items="${pdict.jokes}" var="jokeObject">
 	        <li>${jokeObject.joke}</li>
 	    </isloop>
-	</ul>
     </div>
 </body>
