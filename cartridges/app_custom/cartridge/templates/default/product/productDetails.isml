@@ -149,7 +149,8 @@
 
             <isif condition="${product.jokeTerm}">
                     <isinclude url="${URLUtils.url("Jokes-Search", "term", product.jokeTerm)}">
-                    <iselse>  <isinclude url="${URLUtils.url("Jokes-Show")}">
+            <iselse>  
+                    <isinclude url="${URLUtils.url("Jokes-Show")}">
             </isif>
                 
             
