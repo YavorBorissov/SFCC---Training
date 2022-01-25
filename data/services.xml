@@ -4,7 +4,7 @@
         <url>https://icanhazdadjoke.com/</url>
         <user-id/>
         <password/>
-    </service-credential>
+    </service-credential>   
 
     <service-profile service-profile-id="Joke.Profile">
         <timeout-millis>500</timeout-millis>

@@ -20,5 +20,6 @@ var decorators = require("*/cartridge/models/product/decorators/index");
 module.exports = function fullProduct(product, apiProduct, options) {
   base.call(this, product, apiProduct, options);
   decorators.promo(product, apiProduct);
+  decorators.jokeTerm(product, apiProduct);
   return product;
 };
