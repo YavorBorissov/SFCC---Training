@@ -145,7 +145,8 @@
             </div>
             <iscontentasset aid="content-asset-description-training" />
 
-            
+            <iscomment> <isprint value="${pdict.randomStr}"> </iscomment>
+           
 
             <isif condition="${product.jokeTerm}">
                     <isinclude url="${URLUtils.url("Jokes-Search", "term", product.jokeTerm)}">
