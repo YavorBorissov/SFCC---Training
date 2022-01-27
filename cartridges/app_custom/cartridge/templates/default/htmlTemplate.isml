@@ -1,0 +1,7 @@
+<iscontent type="text/html" />
+
+<isinclude url="${URLUtils.url("Page-Include", "cid", shippingDetails)}"/>
+
+<isslot id="productpage_banner_registered" description="PDP banner 705px x 356px." context="global" />
+
+<iscontentasset aid= "${shippingDetailsID}" />

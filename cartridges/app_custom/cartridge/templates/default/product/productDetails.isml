@@ -1,4 +1,7 @@
 <isdecorate template="common/layout/page">
+<iscomment> <isdecorate template="common/layout/checkout"> </iscomment>
+
+
 <isinclude template="components/modules"/>
 
     <isscript>
@@ -6,6 +9,12 @@
         assets.addJs('/js/productDetail.js');
         assets.addCss('/css/product/detail.css');
     </isscript>
+
+    <isset
+    name  = "shippingDetailsID"                 
+    value = "${dw.system.Site.getCurrent().getCustomPreferenceValue("productShippingDetails")}"         
+    scope = "page"
+    />
 
     <isset name="product" value="${pdict.product}" scope="page" />
     <isset name="isQuickView" value="${false}" scope="page" />
@@ -154,10 +163,11 @@
                     <isinclude url="${URLUtils.url("Jokes-Show")}">
             </isif>
                 
-            
-                
-
         </div>
+
+        <isinclude template="htmlTemplate" />
+
+        
 
     </isobject>
 </isdecorate>

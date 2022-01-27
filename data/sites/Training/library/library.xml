@@ -18,4 +18,14 @@
         </custom-attributes>
     </content>
 
+<content content-id="shippingDetails">
+        <display-name xml:lang="x-default">Shipping Details</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;b&gt;:D&lt;/b&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+    
 </library>
