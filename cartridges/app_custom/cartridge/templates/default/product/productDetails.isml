@@ -1,7 +1,6 @@
 <isdecorate template="common/layout/page">
 <iscomment> <isdecorate template="common/layout/checkout"> </iscomment>
 
-
 <isinclude template="components/modules"/>
 
     <isscript>
@@ -54,6 +53,7 @@
                             <h1 class="product-name hidden-sm-down">${product.productName}</h1>
                         </div>
                     </div>
+                    
 <isprint value="${product.promoMessage}">
 
                     <div class="row">
@@ -140,8 +140,6 @@
                 </div>
             </div>
 
-
-
             <div>
                 <isslot id="cts-recommendations-m" description="Complete the set products" context="global" context-object="${pdict.product.raw}" />
             </div>
@@ -155,7 +153,6 @@
             <iscontentasset aid="content-asset-description-training" />
 
             <iscomment> <isprint value="${pdict.randomStr}"> </iscomment>
-           
 
             <isif condition="${product.jokeTerm}">
                     <isinclude url="${URLUtils.url("Jokes-Search", "term", product.jokeTerm)}">
@@ -166,8 +163,6 @@
         </div>
 
         <isinclude template="htmlTemplate" />
-
-        
 
     </isobject>
 </isdecorate>
