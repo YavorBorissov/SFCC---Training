@@ -1,0 +1,15 @@
+<isset name="counter" value="${0}" scope="page"/>
+
+<isif condition = "${pdict.product.tags.length  > 0}">
+    <isloop items="${pdict.product.tags}" var="tag" status="status">
+        <isif condition="${tag.length > 5}">
+            <iscontinue/>
+        </isif>
+	    <isprint value="${"#"+ tag}"/> 
+        <isset name="counter" value="${counter+=1}" scope="page"/>
+        <isif condition="${counter == 5}">
+            <isbreak/>
+        </isif>
+	</isloop>        
+</isif>
+

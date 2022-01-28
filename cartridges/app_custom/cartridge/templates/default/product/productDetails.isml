@@ -1,4 +1,6 @@
 <isdecorate template="common/layout/page">
+<iscomment> <isdecorate template="common/layout/checkout"> </iscomment>
+
 <isinclude template="components/modules"/>
 
     <isscript>
@@ -6,6 +8,12 @@
         assets.addJs('/js/productDetail.js');
         assets.addCss('/css/product/detail.css');
     </isscript>
+
+    <isset
+    name  = "shippingDetailsID"                 
+    value = "${dw.system.Site.getCurrent().getCustomPreferenceValue("productShippingDetails")}"         
+    scope = "page"
+    />
 
     <isset name="product" value="${pdict.product}" scope="page" />
     <isset name="isQuickView" value="${false}" scope="page" />
@@ -45,6 +53,7 @@
                             <h1 class="product-name hidden-sm-down">${product.productName}</h1>
                         </div>
                     </div>
+
 <isprint value="${product.promoMessage}">
 
                     <div class="row">
@@ -131,8 +140,6 @@
                 </div>
             </div>
 
-
-
             <div>
                 <isslot id="cts-recommendations-m" description="Complete the set products" context="global" context-object="${pdict.product.raw}" />
             </div>
@@ -146,7 +153,6 @@
             <iscontentasset aid="content-asset-description-training" />
 
             <iscomment> <isprint value="${pdict.randomStr}"> </iscomment>
-           
 
             <isif condition="${product.jokeTerm}">
                     <isinclude url="${URLUtils.url("Jokes-Search", "term", product.jokeTerm)}">
@@ -154,10 +160,11 @@
                     <isinclude url="${URLUtils.url("Jokes-Show")}">
             </isif>
                 
-            
-                
-
         </div>
+
+        <isinclude template="htmlTemplate" />
+        <isinclude template="product/productTags" />
 
     </isobject>
 </isdecorate>
+

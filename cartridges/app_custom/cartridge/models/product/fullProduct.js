@@ -21,5 +21,6 @@ module.exports = function fullProduct(product, apiProduct, options) {
   base.call(this, product, apiProduct, options);
   decorators.promo(product, apiProduct);
   decorators.jokeTerm(product, apiProduct);
+  decorators.tags(product, apiProduct);
   return product;
 };

@@ -10,6 +10,7 @@
         <all-instances/>
         <development>
             <preference preference-id="enumTraining">test1</preference>
+            <preference preference-id="productShippingDetails">shippingDetails</preference>
             <preference preference-id="setTraining">
                 <value>sushto qko</value>
             </preference>
