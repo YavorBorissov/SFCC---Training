@@ -1,0 +1,13 @@
+<isset name="counter" value="${1}">
+
+<isif condition = "${pdict.product.tags.length  > 0}">
+        <isloop items="${pdict.product.tags}" var="tags" status = "status">
+	        <isif condition="${tags.length <= 6}">
+               <isprint value="${tags}"/> 
+                    <isif condition="${status.counter == 5}">
+                        <isbreak/>
+                    </isif>
+            </isif>
+	    </isloop>
+</isif>
+
