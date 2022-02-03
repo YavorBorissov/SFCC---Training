@@ -1,0 +1,27 @@
+<div class="details">
+	<form action="${pdict.actionUrl}" class="userDetailsForm" method="POST"
+		name="userDetailsForm" <isprint value="${pdict.userDetailsForm.attributes}">>
+
+		<div class="form-group required">
+			<label> First name: </label>
+			<input type="text" class="form-control" id="firstName"
+            <isprint value="${pdict.userDetailsForm.firstname.attributes}" encoding="off" />>
+
+			<label> Last name: </label>
+            <input type="text" class="form-control" id="lastName"
+            <isprint value="${pdict.userDetailsForm.lastname.attributes}" encoding="off" />>
+
+			<label> Phone: </label>
+            <input type="text" class="form-control" id="phone"
+            <isprint value="${pdict.userDetailsForm.phone.attributes}" encoding="off" />>
+
+			<label> Username: </label> <input type="input" id="username"
+				class="form-control" <isprint value="${pdict.userDetailsForm.username.attributes}" encoding="off" />>
+            <label> Status: </label> <input type="input" id="status"
+				class="form-control" <isprint value="${pdict.userDetailsForm.status.attributes}" encoding="off" />>
+		</div>
+
+		<button type="submit" class="btn btn-block btn-primary">Submit</button>
+		<button type="cancel" class="btn btn-block btn-primary">Cancel</button>
+	</form>
+</div>

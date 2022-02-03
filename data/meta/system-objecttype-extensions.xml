@@ -83,4 +83,27 @@
         </group-definitions>
     </type-extension>
 
+    <type-extension type-id="Profile"> 
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="username">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="status">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions> 
+        <group-definitions>
+            <attribute-group group-id="custom">
+                <display-name xml:lang="x-default">custom</display-name>
+                <attribute attribute-id="status"/>
+                <attribute attribute-id="username"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
 </metadata>

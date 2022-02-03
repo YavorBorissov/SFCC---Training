@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+    <field formid="firstname" label="Firstname:" type="string" mandatory="true" max-length="50" />
+    <field formid="lastname" label="Lastname:" type="string" mandatory="true" max-length="50" />
+    <field formid="phone" label="Phone:" type="string" mandatory="true" max-length="50" />
+    <field formid="username" label="Username:" type="string" mandatory="true" max-length="50" />
+    <field formid="status" label="Status:" type="string" mandatory="true" max-length="1000" />
+
+    <action formid="submit" valid-form="true"/>
+	<action formid="cancel" valid-form="false"/>
+</form>
