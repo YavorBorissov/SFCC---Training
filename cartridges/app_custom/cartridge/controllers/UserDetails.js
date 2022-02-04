@@ -5,7 +5,7 @@ var csrfProtection = require("*/cartridge/scripts/middleware/csrf");
 var userLoggedIn = require("*/cartridge/scripts/middleware/userLoggedIn");
 
 server.get(
-  "Add",
+  "Show",
   server.middleware.https,
   csrfProtection.generateToken,
   userLoggedIn.validateLoggedIn,
