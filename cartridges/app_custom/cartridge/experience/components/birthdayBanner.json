@@ -1,0 +1,29 @@
+{
+  "name": "Birthday Banner",
+  "description": "Banner for birthdays.",
+  "group": "content",
+  "attribute_definition_groups": [
+    {
+      "id": "image",
+      "name": "Banner Image Configuration",
+      "description": "You can define the image file, size and alt text for the banner image.",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Banner Image",
+          "description": "The image shown by the banner.",
+          "type": "file",
+          "required": true
+        },
+        {
+          "id": "text",
+          "name": "Banner Image Text",
+          "description": "The text shown by the banner.",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

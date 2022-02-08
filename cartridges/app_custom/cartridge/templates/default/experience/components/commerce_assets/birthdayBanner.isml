@@ -1,0 +1,9 @@
+<iscomment> <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageAndTextCommon.css');
+</isscript> </iscomment>
+
+<img
+    src="${pdict.image}"
+    alt="${pdict.text}"
+/>
