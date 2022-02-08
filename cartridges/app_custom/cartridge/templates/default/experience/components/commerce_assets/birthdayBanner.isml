@@ -6,7 +6,6 @@
 <div class ="birthdayImage">
     <img 
         src="${pdict.image.src.desktop}"
-        alt="${pdict.text}"
     />
+    <div class="text-block"><h2>${pdict.text}</h2></div>
 </div>
-
