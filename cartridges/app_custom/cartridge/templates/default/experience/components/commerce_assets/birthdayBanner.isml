@@ -1,9 +1,12 @@
-<iscomment> <isscript>
+<isscript>
     var assets = require('*/cartridge/scripts/assets.js');
-    assets.addCss('/css/experience/components/commerceAssets/imageAndTextCommon.css');
-</isscript> </iscomment>
+    assets.addCss('/css/experience/components/birthdayBanner.css');
+</isscript>
 
-<img
-    src="${pdict.image}"
-    alt="${pdict.text}"
-/>
+<div class ="birthdayImage">
+    <img 
+        src="${pdict.image.src.desktop}"
+        alt="${pdict.text}"
+    />
+</div>
+

@@ -12,7 +12,7 @@
           "id": "image",
           "name": "Banner Image",
           "description": "The image shown by the banner.",
-          "type": "file",
+          "type": "image",
           "required": true
         },
         {
