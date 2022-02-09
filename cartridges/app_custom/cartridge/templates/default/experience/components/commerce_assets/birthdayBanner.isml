@@ -1,0 +1,11 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/birthdayBanner.css');
+</isscript>
+
+<div class ="birthdayImage">
+    <img 
+        src="${pdict.image.src.desktop}"
+    />
+    <div class="text-block"><h2>${pdict.text}</h2></div>
+</div>
