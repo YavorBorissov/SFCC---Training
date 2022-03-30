@@ -1,0 +1,9 @@
+<body>
+
+    <h1>${Resource.msg('email.msg.availability.hi', 'availability-email', null)}&nbsp;${param.name},</h1>
+
+    <h3><isprint value="${Resource.msgf('email.msg.availability.body','availability-email', null, param.pid, param.pname)}"/></h3>
+
+    <iscomment> <p><a href="${pdict.url}">${pdict.url}</a></p> </iscomment>
+
+</body>

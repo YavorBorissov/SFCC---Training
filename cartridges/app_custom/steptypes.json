@@ -1,0 +1,78 @@
+{
+  "step-types": {
+    "script-module-step": [
+      {
+        "@type-id": "custom.importJokes",
+        "@supports-parallel-execution": "false",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "false",
+        "description": "Import Jokes",
+        "module": "app_custom/cartridge/scripts/steps/importJokes.js",
+        "function": "run",
+        "transactional": "false",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": []
+        }
+      },
+
+      {
+        "@type-id": "custom.notifyForAvailability",
+        "@supports-parallel-execution": "false",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "false",
+        "description": "Notify For Availability",
+        "module": "app_custom/cartridge/scripts/steps/notifyForAvailability.js",
+        "function": "run",
+        "transactional": "false",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": []
+        }
+      }
+    ],
+
+    "chunk-script-module-step": [
+      {
+        "@type-id": "custom.exportProducts",
+        "@supports-parallel-execution": "false",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "false",
+        "description": "Export Products",
+        "module": "app_custom/cartridge/scripts/steps/exportProducts.js",
+        "before-step-function": "beforeStep",
+        "read-function": "read",
+        "process-function": "process",
+        "write-function": "write",
+        "after-step-function": "afterStep",
+        "chunk-size": 10,
+        "transactional": "true",
+        "parameters": {
+          "parameter": [
+            {
+              "@name": "ExportFileName",
+              "@type": "string",
+              "@required": "false"
+            }
+          ]
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "Used when the step failed with an error."
+            },
+            {
+              "@code": "OK",
+              "description": "Used when the step finished successfully."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
