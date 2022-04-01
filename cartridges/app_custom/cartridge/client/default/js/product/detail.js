@@ -21,20 +21,6 @@ $("form.subscribe-form").on("submit", function (e) {
     },
     error: function (err) {},
   });
-  //   if ($email === "") {
-  //     return false;S
-  //   }
-  //   if ($email !== "") {
-  //     $.post(url, formValues, function (data) {
-  //       // Display the returned data in browser
-  //       $("#result").replaceWith(
-  //         "<div class='avail-notification' style='text-align: center; border-style: dashed;'> <i><b>We'll notify you as soon as this product is available.</b></i></div>"
-  //       );
-  //       // .html(
-  //       //   "<div class='avail-notification' style='text-align: center; border-style: dashed;'> <i><b>We'll notify you as soon as this product is available.</b></i></div>"
-  //       // );
-  //     });
-  //   }
 });
 
 module.exports = base;
