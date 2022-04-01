@@ -1,0 +1,44 @@
+<main class="main"> 
+   
+        <div class="main-learning-simplified">
+            <img class="background" src="${URLUtils.staticURL('/images/university-background.jpg')}"/>
+            <div class="container-main">
+                <h1 class="title">
+                    <div class="title-empty-start"></div>
+                    <div class="title-container">
+                        <span class="title-grey">Learn 2 </span>
+                        <span class="title-green">learn</span>
+                    </div>
+                    <div class="title-empty-end"></div>
+                </h1>
+                <h2 class="subtitle">
+                    <div class="subtitle-empty-start"></div>
+                    <div class="subtitle-container">
+                        <span>learning simplified</span>
+                    </div>
+                    <div class="subtitle-empty-end"></div>
+                <h2>
+                <h3 class="text-for-you">
+                    <div class="text-for-you-container">
+                        <span>The best learning materials picked by us for you, all gathered in one place!</span>
+                    </div>
+                <h3>
+            </div>
+        </div>
+    
+    <div class="main-product-links">
+        <div class="main-books">
+            <img class="img-books" src="${URLUtils.staticURL('/images/books.jpg')}"/>
+            <div class="txt-in-img">
+                <h3>Check out our books</h3>
+            </div>
+        </div>
+
+        <div class="main-courses">
+            <img class="img-books" src="${URLUtils.staticURL('/images/courses.jpg')}"/>
+            <div class="txt-in-img">
+                <h3>Check out our courses</h3>
+            </div>
+        </div>
+    </div>
+</main>
