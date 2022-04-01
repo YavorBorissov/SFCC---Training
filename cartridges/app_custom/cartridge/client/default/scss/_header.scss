@@ -1,0 +1,36 @@
+#sg-navbar-collapse {
+  display: none !important;
+}
+.header-banner {
+  display: none;
+}
+
+.navbar-header.brand {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  z-index: 2;
+}
+
+.brand {
+  padding: 3px;
+}
+
+img.hidden-md-down {
+  align-self: stretch;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+img.d-lg-none {
+  align-self: stretch;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.header.container {
+  border-bottom: $line;
+}
