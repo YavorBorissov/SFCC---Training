@@ -136,9 +136,30 @@
                         <div class="row">
                             <isinclude template="product/components/socialIcons" />
                         </div>
+                        <isif condition="${!pdict.isAvailable}">
+                            <isif condition="${pdict.isSubscribed}">
+                                    <iscomment> <div id="a-n" class="avail-notification" style="text-align: center; border-style: dashed;">     <i><b>We'll notify you as soon as this product is available.</b></i></div> </iscomment>
+                                    <div class="subscribed-message alert alert-info">
+                                        <isprint value="${Resource.msg("message.success", "subscribe-form", null)}" encoding="on" />
+                                    </div>
+                                <iselse>  
+                                    <form class="subscribe-form" action="${URLUtils.url("Product-Subscribe")}" method="post">  
+                                        <input type="hidden" id="pid" name="pid" value="${product.id}">
+                                        <iscomment> <input type="hidden" id="user" name="user" value="${product.id}"> </iscomment>
+                                    <div class="mb-3"> 
+                                        <label for="email" class="form-label">Subscribe to product:</label><br>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="email:">
+                                    </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                    <div id="result" class="subscribed-message alert alert-info d-none "></div>
+                            </isif>
+                        </isif>
+                        
                     </div>
                 </div>
             </div>
+
 
             <div>
                 <isslot id="cts-recommendations-m" description="Complete the set products" context="global" context-object="${pdict.product.raw}" />
@@ -162,8 +183,14 @@
                 
         </div>
 
+        <link rel="stylesheet" href="${URLUtils.staticURL('/css/mainnone.css')}" />
+
+
         <isinclude template="htmlTemplate" />
         <isinclude template="product/productTags" />
+      
+        
+        <isprint value="${Resource.msg('message.plain','welcome',null)}" encoding="on" />
 
     </isobject>
 </isdecorate>
