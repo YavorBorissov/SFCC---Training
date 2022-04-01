@@ -10,3 +10,5 @@
 /dw-cli.json
 dw.json
 launch.json
+/cartridges/app_storefront_base
+/cartridges/test_sfcc_editor
