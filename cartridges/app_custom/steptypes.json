@@ -20,7 +20,7 @@
 
       {
         "@type-id": "custom.notifyForAvailability",
-        "@supports-parallel-execution": "false",
+        "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
         "@supports-organization-context": "false",
         "description": "Notify For Availability",

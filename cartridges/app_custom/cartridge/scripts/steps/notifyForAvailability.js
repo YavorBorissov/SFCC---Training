@@ -60,7 +60,7 @@ exports.run = function () {
     mail.addTo(email);
     var list = mail.getTo();
     mail.setTo(list);
-    mail.setSubject("Product availability");
+    mail.setSubject("Product is available");
     mail.setContent(text);
 
     mail.send();
