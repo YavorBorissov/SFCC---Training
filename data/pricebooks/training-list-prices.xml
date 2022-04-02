@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+    <pricebook>
+        <header pricebook-id="training-list-prices">
+            <currency>USD</currency>
+            <display-name xml:lang="x-default">List Prices</display-name>
+            <online-flag>true</online-flag>
+        </header>
+
+        <price-tables>
+            <price-table product-id="TG001A">
+                <amount quantity="1">28.99</amount>
+            </price-table>
+
+            <price-table product-id="TG001B">
+                <amount quantity="1">13.99</amount>
+            </price-table>
+
+            <price-table product-id="TG001C">
+                <amount quantity="1">16.99</amount>
+            </price-table>
+
+        </price-tables>
+    </pricebook>
+</pricebooks>
