@@ -6,7 +6,6 @@ var job = require("dw/job");
 var io = require("dw/io");
 
 var service = require("app_custom/cartridge/services/jokeservice");
-// var jokeDetails = CustomObjectMgr.getCustomObject("jokeDetails");
 
 var products;
 var searchTerm;
