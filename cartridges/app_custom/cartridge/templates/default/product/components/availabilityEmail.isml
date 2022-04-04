@@ -4,6 +4,6 @@
 
     <h3><isprint value="${Resource.msgf('email.msg.availability.body','availability-email', null, param.pid, param.pname)}"/></h3>
 
-    <iscomment> <p><a href="${pdict.url}">${pdict.url}</a></p> </iscomment>
+    <h2><a href="${URLUtils.abs("Product-Show", "pid", param.pid)}">${Resource.msg('email.msg.availability.take.me.there', 'availability-email', null)}</a></h2>
 
 </body>
