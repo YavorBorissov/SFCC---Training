@@ -145,7 +145,6 @@
                                 <iselse>  
                                     <form class="subscribe-form" action="${URLUtils.url("Product-Subscribe")}" method="post">  
                                         <input type="hidden" id="pid" name="pid" value="${product.id}">
-                                        <iscomment> <input type="hidden" id="user" name="user" value="${product.id}"> </iscomment>
                                     <div class="mb-3"> 
                                         <label for="email" class="form-label">Subscribe to product:</label><br>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="email:">

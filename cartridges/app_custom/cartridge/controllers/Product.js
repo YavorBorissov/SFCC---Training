@@ -78,7 +78,7 @@ server.post("Subscribe", function (req, res, next) {
   } catch (e) {
     res.json({ success: false });
   }
-  // res.redirect(URLUtils.url("Product-Show", "pid", pid));
+  res.redirect(URLUtils.url("Product-Show", "pid", pid));
   next();
 });
 
