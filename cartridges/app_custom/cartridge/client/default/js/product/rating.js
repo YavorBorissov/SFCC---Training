@@ -1,8 +1,6 @@
 "use strict";
 
-var base = require("../../../../../../app_storefront_base/cartridge/client/default/js/product/detail");
-
-$("form.subscribe-form").on("submit", function (e) {
+$("form.rate").on("submit", function (e) {
   e.preventDefault();
   var $form = $(this);
   var url = $form.attr("action");
@@ -15,8 +13,11 @@ $("form.subscribe-form").on("submit", function (e) {
     success: function (data) {
       if (data.success) {
         $form.addClass("d-none");
-        $("#result").append(data.message);
-        $("#result").removeClass("d-none");
+        $("#rate-after").append(data.message);
+        $("#rate-after").removeClass("d-none");
+        $("#rate-after").addClass("alert");
+        $("#rate-after").addClass("alert-warning");
+        $("#rate-after").addClass("alert-rate");
       }
     },
     error: function (err) {},
