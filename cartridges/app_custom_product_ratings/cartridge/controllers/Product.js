@@ -43,9 +43,7 @@ server.post("Rate", function (req, res, next) {
   var Transaction = require("dw/system/Transaction");
   var CustomObjectMgr = require("dw/object/CustomObjectMgr");
   var Resource = require("dw/web/Resource");
-  var URLUtils = require("dw/web/URLUtils");
   var Cookie = require("dw/web/Cookie");
-  var Profile = require("dw/customer/Profile");
 
   var cookie = getCookie("saveRating");
   var cookieJson = { ratings: [] };
@@ -61,9 +59,9 @@ server.post("Rate", function (req, res, next) {
     cookieJson = JSON.parse(cookie.getValue());
   }
 
-  var bol = containsObject(obj, cookieJson.ratings);
+  var contains = containsObject(obj, cookieJson.ratings);
 
-  if (!bol) {
+  if (!contains) {
     cookieJson.ratings.push(obj);
 
     var saveProductCookie = new Cookie(
@@ -73,37 +71,32 @@ server.post("Rate", function (req, res, next) {
     response.addHttpCookie(saveProductCookie);
   }
 
-  // var name = accountModel
-  //   ? accountModel.profile.firstName
-  //   : Resource.msg("message.guest", "welcome", null);
+  var customObjectCount = function (pid) {
+    var co = CustomObjectMgr.queryCustomObjects(
+      "ProductRate",
+      "custom.pid = {0}",
+      null,
+      pid
+    );
+
+    var count = co.getCount() !== -1 ? co.getCount() + 1 : 1;
+    return count.toString();
+  };
+
+  Transaction.wrap(function () {
+    var id = pid + "_" + customObjectCount(pid);
+    if (!CustomObjectMgr.getCustomObject("ProductRate", id)) {
+      var co = CustomObjectMgr.createCustomObject("ProductRate", id);
+      co.custom.pid = pid;
+      co.custom.rating = rate;
+    }
+  });
 
   res.json({
     success: true,
     message: Resource.msg("message.thank.you", "product-rating", null),
   });
 
-  // try {
-  //   Transaction.wrap(function () {
-  //     if (
-  //       !CustomObjectMgr.getCustomObject("ProductSubscribe", pid + "_" + email)
-  //     ) {
-  //       var co = CustomObjectMgr.createCustomObject(
-  //         "ProductSubscribe",
-  //         pid + "_" + email
-  //       );
-  //       co.custom.email = email;
-  //       co.custom.pid = pid;
-  //       co.custom.name = name;
-  //     }
-  //   });
-
-  //   res.json({
-  //     success: true,
-  //     message: Resource.msg("message.success", "subscribe-form", null),
-  //   });
-  // } catch (e) {
-  //   res.json({ success: false });
-  // }
   next();
 });
 
