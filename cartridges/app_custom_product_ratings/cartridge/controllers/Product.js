@@ -5,25 +5,7 @@ var page = module.superModule;
 server.extend(page);
 var Site = require("dw/system/Site");
 
-// server.append("Show", function (req, res, next) {
-//   var randomStr = Site.getCurrent().getCustomPreferenceValue("randomStr");
-
-//   var viewData = res.getViewData();
-//   viewData.randomStr = randomStr;
-
-//   res.setViewData(viewData);
-//   next();
-// });
-
-var getCookie = function (name) {
-  var cookies = request.getHttpCookies();
-  for (var i in cookies) {
-    if (cookies[i].name === name) {
-      return cookies[i];
-    }
-  }
-  return false;
-};
+var cookieHelper = require("*/cartridge/scripts/helpers/cookieHelper");
 
 function containsObject(obj, list) {
   var i;
@@ -45,7 +27,7 @@ server.post("Rate", function (req, res, next) {
   var Resource = require("dw/web/Resource");
   var Cookie = require("dw/web/Cookie");
 
-  var cookie = getCookie("saveRating");
+  var cookie = cookieHelper.getCookie("saveRating");
   var cookieJson = { ratings: [] };
 
   var pid = req.form.pid;
@@ -103,7 +85,7 @@ server.post("Rate", function (req, res, next) {
 server.append("Show", function (req, res, next) {
   var viewData = res.getViewData();
 
-  var cookie = getCookie("saveRating");
+  var cookie = cookieHelper.getCookie("saveRating");
   var hasRated = false;
   if (cookie) {
     var valuesObj = JSON.parse(cookie.value);

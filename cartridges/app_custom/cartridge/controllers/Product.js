@@ -4,6 +4,7 @@ var server = require("server");
 var page = module.superModule;
 server.extend(page);
 var Site = require("dw/system/Site");
+var cookieHelper = require("*/cartridge/scripts/helpers/cookieHelper");
 
 server.append("Show", function (req, res, next) {
   var randomStr = Site.getCurrent().getCustomPreferenceValue("randomStr");
@@ -15,16 +16,6 @@ server.append("Show", function (req, res, next) {
   next();
 });
 
-var getCookie = function (name) {
-  var cookies = request.getHttpCookies();
-  for (var i in cookies) {
-    if (cookies[i].name === name) {
-      return cookies[i];
-    }
-  }
-  return false;
-};
-
 server.post("Subscribe", function (req, res, next) {
   var accountHelpers = require("*/cartridge/scripts/account/accountHelpers");
   var accountModel = accountHelpers.getAccountModel(req);
@@ -32,11 +23,9 @@ server.post("Subscribe", function (req, res, next) {
   var Transaction = require("dw/system/Transaction");
   var CustomObjectMgr = require("dw/object/CustomObjectMgr");
   var Resource = require("dw/web/Resource");
-  var URLUtils = require("dw/web/URLUtils");
   var Cookie = require("dw/web/Cookie");
-  var Profile = require("dw/customer/Profile");
 
-  var cookie = getCookie("savePid");
+  var cookie = cookieHelper.getCookie("savePid");
   var productIDs = { pids: [] };
 
   if (cookie) {
@@ -89,7 +78,7 @@ server.append("Show", function (req, res, next) {
     isAvailable = true;
   }
 
-  var cookie = getCookie("savePid");
+  var cookie = cookieHelper.getCookie("savePid");
   var isSubscribed = false;
   if (cookie) {
     var pidsObj = JSON.parse(cookie.value);
