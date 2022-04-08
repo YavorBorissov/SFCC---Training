@@ -22,8 +22,3 @@ $("form.rate").on("submit", function (e) {
     error: function (err) {},
   });
 });
-<<<<<<< HEAD
-=======
-
-module.exports = base;
->>>>>>> parent of 3c1e7ecd (fixes)
