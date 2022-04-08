@@ -1,0 +1,22 @@
+{
+  "step-types": {
+    "script-module-step": [
+      {
+        "@type-id": "custom.updateProductRating",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "false",
+        "description": "Update Product Rating",
+        "module": "app_custom_product_ratings/cartridge/scripts/steps/updateProductRating.js",
+        "function": "run",
+        "transactional": "false",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": []
+        }
+      }
+    ]
+  }
+}
