@@ -12,5 +12,6 @@ dw.json
 launch.json
 /cartridges/app_storefront_base
 /cartridges/test_sfcc_editor
-/cartridges/*/cartridge/static/default/css/*.css
-/cartridges/*/cartridge/static/default/js/*.js
+cartridges/app_custom/cartridge/static/default/css/*.css
+cartridges/app_custom/cartridge/static/default/js/*.js
+
