@@ -19,3 +19,16 @@
     <div id="rate-after" class="d-none"></div>
 </div>
 </isif>
+<isif condition="${product.peopleSum}">
+    <div class="stars">
+    <div class="rating-wrapper">
+        <p class="rating">
+        <isprint value="${"★" + ((parseInt(product.ratingSum)/parseInt(product.peopleSum))%1 !== 0 ?(parseInt(product.ratingSum)/parseInt(product.peopleSum)).toFixed(1) :(parseInt(product.ratingSum)/parseInt(product.peopleSum)).toFixed(0))+ "/5"}"/>
+        </p>
+        <div class="people-rated">
+        &nbsp;
+        <isprint value="${"("+parseInt(product.peopleSum).toFixed()+" reviews)"}"/>
+        </div>
+    </div>
+    </div>
+</isif>

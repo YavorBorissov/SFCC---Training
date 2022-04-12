@@ -19,9 +19,6 @@ function containsObject(obj, list) {
 }
 
 server.post("Rate", function (req, res, next) {
-  var accountHelpers = require("*/cartridge/scripts/account/accountHelpers");
-  var accountModel = accountHelpers.getAccountModel(req);
-
   var Transaction = require("dw/system/Transaction");
   var CustomObjectMgr = require("dw/object/CustomObjectMgr");
   var Resource = require("dw/web/Resource");
@@ -53,24 +50,19 @@ server.post("Rate", function (req, res, next) {
     response.addHttpCookie(saveProductCookie);
   }
 
-  var customObjectCount = function (pid) {
-    var co = CustomObjectMgr.queryCustomObjects(
-      "ProductRate",
-      "custom.pid = {0}",
-      null,
-      pid
-    );
-
-    var count = co.getCount() !== -1 ? co.getCount() + 1 : 1;
-    return count.toString();
-  };
-
   Transaction.wrap(function () {
-    var id = pid + "_" + customObjectCount(pid);
-    if (!CustomObjectMgr.getCustomObject("ProductRate", id)) {
-      var co = CustomObjectMgr.createCustomObject("ProductRate", id);
-      co.custom.pid = pid;
-      co.custom.rating = rate;
+    if (!CustomObjectMgr.getCustomObject("ProductRatingSum", pid)) {
+      var co = CustomObjectMgr.createCustomObject("ProductRatingSum", pid);
+      var ratingSum = rate;
+      var peopleSum = 1;
+      co.custom.ratingSum = ratingSum;
+      co.custom.peopleSum = peopleSum;
+    } else if (CustomObjectMgr.getCustomObject("ProductRatingSum", pid)) {
+      var co = CustomObjectMgr.getCustomObject("ProductRatingSum", pid);
+      var ratingSum = parseInt(co.custom.ratingSum) + parseInt(rate);
+      var peopleSum = parseInt(co.custom.peopleSum) + 1;
+      co.custom.ratingSum = ratingSum;
+      co.custom.peopleSum = peopleSum;
     }
   });
 
@@ -95,6 +87,14 @@ server.append("Show", function (req, res, next) {
   }
 
   viewData.hasRated = hasRated;
+  res.setViewData(viewData);
+  next();
+});
+
+server.append("Show", function (req, res, next) {
+  var viewData = res.getViewData();
+
+  // viewData.peopleSum = peopleSum;
   res.setViewData(viewData);
   next();
 });

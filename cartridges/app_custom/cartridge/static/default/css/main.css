@@ -268,7 +268,7 @@ hr.hidden-xs-down {
 .rate {
   float: left;
   height: 46px;
-  padding: 0 10px;
+  padding: 0 10px 0 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row-reverse;
@@ -310,4 +310,30 @@ hr.hidden-xs-down {
       -ms-grid-row-align: center;
       align-self: center;
   -ms-flex-order: -1;
-      order: -1; }
+      order: -1;
+  display: inline-block; }
+
+.rating-wrapper {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #fff3cd;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  color: #856404;
+  border-radius: 10px;
+  padding: 7px; }
+
+p.rating {
+  font-size: 20px;
+  margin-bottom: 0rem; }
+
+.people-rated {
+  -ms-flex: 1;
+      flex: 1;
+  text-align: end;
+  margin-right: 2px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }

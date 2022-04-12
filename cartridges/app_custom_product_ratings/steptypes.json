@@ -1,20 +1,40 @@
 {
   "step-types": {
-    "script-module-step": [
+    "chunk-script-module-step": [
       {
         "@type-id": "custom.updateProductRating",
-        "@supports-parallel-execution": "true",
+        "@supports-parallel-execution": "false",
         "@supports-site-context": "true",
-        "@supports-organization-context": "false",
-        "description": "Update Product Rating",
+        "@supports-organization-context": "true",
+        "description": "Export Products",
         "module": "app_custom_product_ratings/cartridge/scripts/steps/updateProductRating.js",
-        "function": "run",
-        "transactional": "false",
+        "before-step-function": "beforeStep",
+        "read-function": "read",
+        "process-function": "process",
+        "write-function": "write",
+        "after-step-function": "afterStep",
+        "chunk-size": 10,
+        "transactional": "true",
         "parameters": {
-          "parameter": []
+          "parameter": [
+            {
+              "@name": "ExportFileName",
+              "@type": "string",
+              "@required": "false"
+            }
+          ]
         },
         "status-codes": {
-          "status": []
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "Used when the step failed with an error."
+            },
+            {
+              "@code": "OK",
+              "description": "Used when the step finished successfully."
+            }
+          ]
         }
       }
     ]

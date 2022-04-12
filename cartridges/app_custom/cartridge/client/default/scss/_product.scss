@@ -19,7 +19,7 @@
 .rate {
   float: left;
   height: 46px;
-  padding: 0 10px;
+  padding: 0 10px 0 0;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -58,4 +58,33 @@
 .sbmt-btn {
   align-self: center;
   order: -1;
+  display: inline-block;
+}
+
+.rating-wrapper {
+  display: inline-flex;
+  // width: 50%;
+  background-color: #fff3cd;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #856404;
+  border-radius: 10px;
+  padding: 7px;
+  // align-items: center;
+}
+
+p.rating {
+  // display: inline-block;
+  font-size: 20px;
+
+  margin-bottom: 0rem;
+  // align-self: center;
+}
+
+.people-rated {
+  flex: 1;
+  // display: inline-block;
+  text-align: end;
+  margin-right: 2px;
+  align-self: center;
 }
