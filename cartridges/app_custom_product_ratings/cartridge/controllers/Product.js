@@ -91,12 +91,4 @@ server.append("Show", function (req, res, next) {
   next();
 });
 
-server.append("Show", function (req, res, next) {
-  var viewData = res.getViewData();
-
-  // viewData.peopleSum = peopleSum;
-  res.setViewData(viewData);
-  next();
-});
-
 module.exports = server.exports();
