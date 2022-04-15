@@ -4,4 +4,5 @@ var processInclude = require("../../../../../app_storefront_base/cartridge/clien
 
 $(document).ready(function () {
   processInclude(require("./product/detail"));
+  processInclude(require("./product/rating"));
 });
