@@ -1,3 +1,9 @@
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/flickity.pkgd.min.js');
+        assets.addCss('/css/flickity.css');
+    </isscript>
+
 <main class="main"> 
    
         <div class="main-learning-simplified">
@@ -25,20 +31,10 @@
                 <h3>
             </div>
         </div>
-    
-    <div class="main-product-links">
-        <div class="main-books">
-            <img class="img-books" src="${URLUtils.staticURL('/images/books.jpg')}"/>
-            <div class="txt-in-img">
-                <h3>Check out our books</h3>
-            </div>
-        </div>
 
-        <div class="main-courses">
-            <img class="img-books" src="${URLUtils.staticURL('/images/courses.jpg')}"/>
-            <div class="txt-in-img">
-                <h3>Check out our courses</h3>
-            </div>
-        </div>
-    </div>
+    
+    <isslot id="category-links" description="Category Links" context="global" />
+    <iscomment> <isslot id="product-links" description="Product Links" context="global" /> </iscomment> 
+</div>
+    
 </main>
