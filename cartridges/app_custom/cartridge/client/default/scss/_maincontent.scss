@@ -205,3 +205,52 @@
 .home-email-signup {
   display: none;
 }
+.some-products-wrapper {
+  background-color: #4a6386;
+  align-content: center;
+  text-align: center;
+}
+.some-of-our-products {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  text-align: center;
+  color: #636565;
+
+  font-size: 40px;
+  padding: 5px;
+}
+.outer-container-product-tiles {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: #4a6386;
+  padding: 2rem;
+}
+
+.homepage-product-listing.row {
+  flex: 1;
+  align-items: center;
+  // width: 100%;
+}
+
+// .hp-product-grid {
+//   align-content: center;
+// }
+
+.container.home-product-tiles.homepage {
+  flex: 1;
+
+  max-width: 1400px;
+}
+// .product-tile {
+//   // padding: 2rem 2rem 2rem 0;
+//   flex: 1;
+// }
+
+div.pdp-link {
+  color: white;
+}
+
+.product-tile .tile-body {
+  padding: 0.625em 0 0em !important;
+}

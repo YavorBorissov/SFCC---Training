@@ -4,7 +4,7 @@ $color-green-dark: #71a57c;
 $color-green-light: #d0ebb7;
 $color-primary-light: #5f94d49c;
 $color-primary-dark-lighter: #84b3f0;
-
+$color-background-main: rgb(231, 245, 255);
 $color-secondary: #101d2c;
 $color-tertiary: #eeeeee;
 
@@ -29,12 +29,12 @@ html {
 }
 
 body {
-  // background-color: $color-primary-light;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-green-dark
-  );
+  background-color: $color-background-main;
+  // background-image: linear-gradient(
+  //   to right,
+  //   $color-primary-light,
+  //   $color-green-dark
+  // );
   font-family: $font-primary;
   color: $color-secondary;
   font-weight: 300;
